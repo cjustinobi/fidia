@@ -1,0 +1,58 @@
+:root {
+  --border-color: #D0D5DD;
+  --app-accent: #5b38ac;
+}
+
+
+a {
+  color: #344054;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #344054;
+}
+
+.app-border {
+  border: 1px solid var(--border-color);
+}
+
+.app-accent {
+  color: var(--app-accent)
+}
+
+.app-accent:hover {
+  color: var(--app-accent)
+}
+
+.app-pd {
+  padding: 0 80px;
+}
+
+.ul {
+  padding: 0;
+  margin: 0;
+}
+.ul li{
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  .ul li {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-pd {
+    padding: 0 40px;
+  }
+}
