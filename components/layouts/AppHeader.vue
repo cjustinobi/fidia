@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar navbar-light bg-light border-bottom">
+  <nav class="navbar navbar-light bg-white border-bottom">
     <div class="container-fluid">
       <nuxt-link class="d-inline d-lg-none" to="#"><img src="~/assets/img/logo.png" alt=""></nuxt-link>
       <div class="d-none d-lg-inline">
-        <LayoutsNavLinks :windowWidth="windowWidth"/>
+        <LayoutsNavLinks />
       </div>
       <div class="d-none d-lg-inline">
         <button type="button" class="btn app-border">
@@ -20,36 +20,7 @@
 
 <script>
   export default {
-    name: 'AppHeader',
-    data() {
-      return {
-        windowWidth: '',
-      }
-    },
-    methods: {
-      toggleDrawer() {
-        this.$store.commit('TOGGLE_DRAWER')
-      },
-      getWindowWidth(event) {
-        this.windowWidth = document.documentElement.clientWidth;
-      }
-    },
-    beforeMount() {
-      window.addEventListener('resize', this.getWindowWidth);
-      this.getWindowWidth()
-    },
-    // watch: {
-    //   windowWidth: {
-    //     handler: function (val) {
-    //       const mediumDevice = 992
-    //       if (process.client) {
-    //         val >= mediumDevice ? document.querySelector('.left-links, .right-links').classList.remove('d-none') :
-    //           document.querySelector('.left-links, .right-links').classList.add('d-none')
-    //       }
-    //     },
-    //     immediate: true
-    //   }
-    // }
+    name: 'AppHeader'
   }
 </script>
 
